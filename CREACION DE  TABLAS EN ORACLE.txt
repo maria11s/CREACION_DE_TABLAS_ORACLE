@@ -1,0 +1,28 @@
+create table CLIENTE 
+(
+   cliente_id           int                  not null,
+   cliente_nombre    	varchar(40)          null,
+   cliente_apellido     varchar(40)          null,
+   cliente_cedula       varchar(40)          null,
+   cliente_celular      varchar(40)          null,
+   cliente_edad       	varchar(40)          null,
+   constraint PK_CLIENTE primary key (cliente_id)
+);
+
+
+create table UBICACION (
+  habitacion_id      int                  not null,
+   cliente_id        int                  not null,
+   ciudad      		 varchar(20)          null,
+   constraint PK_UBICACION primary key (cliente_id, habitacion_id)
+)
+
+
+create table HABITACION 
+(
+   hab_id        		         int                  not null,
+   hab_numerohabitacion       	 varchar(40)          null,
+   hab_valorhabitacion       	 decimal(10)          null,
+   hab_descripcionhabitacion     varchar(50)          null,
+   constraint PK_HABITACION primary key (hab_id)
+);
